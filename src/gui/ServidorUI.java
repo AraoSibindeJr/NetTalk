@@ -40,6 +40,7 @@ public class ServidorUI extends JFrame implements ActionListener {
 
     void accao(){
         btn.addActionListener(this);
+
     }
 
     @Override
