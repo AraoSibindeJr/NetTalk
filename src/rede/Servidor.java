@@ -1,4 +1,4 @@
-package rede;
+package src.rede;
 
 import java.io.*;
 import java.net.*;
