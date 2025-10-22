@@ -14,6 +14,7 @@ public class Servidor {
 
     public Servidor() throws IOException {
         criarServerSocket();
+        start();
     }
 
     private void criarServerSocket() throws IOException {
@@ -23,14 +24,14 @@ public class Servidor {
 
 
     public void start() {
-        System.out.println("Aguardando conexões...");
+        System.out.println("Aguardando conexoes...");
         while (true) {
             try {
                 Socket socket = esperarConexao();
                 System.out.println("Cliente conectado: " + socket.getInetAddress());
                 tratarConexao(socket);
             } catch (IOException e) {
-                System.out.println("Erro ao aceitar conexão: " + e.getMessage());
+                System.out.println("Erro ao aceitar conexao: " + e.getMessage());
             }
         }
     }
@@ -79,7 +80,7 @@ public class Servidor {
 }
 
     // Main para iniciar o servidor
-    /*public static void main(String[] args) {
+   /* public static void main(String[] args) {
         try {
             Servidor server = new Servidor();
             server.start();
@@ -88,3 +89,4 @@ public class Servidor {
         }
     }
 }*/
+
